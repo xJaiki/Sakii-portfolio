@@ -1,0 +1,106 @@
+@keyframes slideIn {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 0px;
+    }
+  }
+
+@keyframes planetsScale {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
+
+@keyframes planetsShow {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+.container {
+    /*BACKGROUND SETTINGS*/
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("/assets/background.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.logo {
+    left:0;
+    right:0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    width: 300px;
+    filter: invert(100%);
+    animation: 0.6s cubic-bezier(.2,.02,.22,1.45) 0s 1 slideIn;
+}
+
+.planet {
+    position: absolute;
+    width: 200px;
+    animation: 0.6s cubic-bezier(.2,.02,.22,1.45) planetsScale 0.6s;
+    animation: 0.6s ease-in planetShow;
+}
+
+.about {
+    top: 180px;
+    left: 13vw;
+    filter: invert(100%)
+}
+
+.works {
+    top: 150px;
+    left: 65vw;
+    filter: invert(100%)
+}
+
+.instagram {
+    top: 455px;
+    left: 51vw;
+}
+
+.youtube {
+    top: 550px;
+    left: 75vw;
+}
+
+.commissions {
+    top: 515px;
+    left: 20vw;
+    filter: invert(100%)
+}
+
+.email {
+    top: 670px;
+    left: 40vw;
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        width: 40vw;
+    }
+    .planet {
+        width: 10vh;
+    }
+}
+  
