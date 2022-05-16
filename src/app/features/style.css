@@ -16,14 +16,15 @@
     }
   }
 
-@keyframes planetsShow {
+@keyframes planetsShadow {
     from {
-        opacity: 0;
+        box-shadow: 0px 0px 2px white;
     }
     to {
-        opacity:1;
+        box-shadow: 0px 0px 30px white;
     }
 }
+
 
 .container {
     /*BACKGROUND SETTINGS*/
@@ -58,41 +59,57 @@
 .planet {
     position: absolute;
     width: 200px;
-    animation: 0.6s cubic-bezier(.2,.02,.22,1.45) planetsScale 0.6s;
-    animation: 0.6s ease-in planetShow;
 }
 
 .about {
     top: 180px;
     left: 13vw;
-    filter: invert(100%)
+    filter: invert(100%);
+    transform: scale(0);
+    animation: 0.6s cubic-bezier(.2,.02,.22,1.45) 0.6s planetsScale;
+    animation-fill-mode: forwards;
 }
 
 .works {
     top: 150px;
     left: 65vw;
-    filter: invert(100%)
+    filter: invert(100%);
+    transform: scale(0);
+    animation: 0.6s cubic-bezier(.2,.02,.22,1.45) 0.7s planetsScale, 1s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .instagram {
     top: 455px;
     left: 51vw;
+    transform: scale(0);
+    animation: 0.6s cubic-bezier(.2,.02,.22,1.45) 0.8s planetsScale;
+    animation-fill-mode: forwards;
 }
 
 .youtube {
     top: 550px;
     left: 75vw;
+    transform: scale(0);
+    animation: 0.6s cubic-bezier(.2,.02,.22,1.45) 0.6s planetsScale;
+    animation-fill-mode: forwards;
 }
 
 .commissions {
     top: 515px;
     left: 20vw;
-    filter: invert(100%)
+    filter: invert(100%);
+    transform: scale(0);
+    animation: 0.6s cubic-bezier(.2,.02,.22,1.45) 0.7s planetsScale;
+    animation-fill-mode: forwards;
 }
 
 .email {
     top: 670px;
     left: 40vw;
+    transform: scale(0);
+    animation: 0.6s cubic-bezier(.2,.02,.22,1.45) 0.6s planetsScale;
+    animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 600px) {
